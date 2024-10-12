@@ -5,7 +5,10 @@ int main(){
     srand(time(0));
     int computer = rand() % 3;
     int player;
-    printf("0-->Rock \n1-->Paper\n2-->Scissors\nSelect a number\n");
+    while(1){
+    printf("\n--------------------------------------");
+    printf("\nLets paly Rock Paper Scissors Game!!!");
+    printf("\n0-->Rock \n1-->Paper\n2-->Scissors\n3-->Exit\nSelect a number\n");
     scanf("%d",&player);
     if(player==computer)
         printf("The computer chose the same thing\nIt is a tie!!");
@@ -27,5 +30,10 @@ int main(){
      else if(player==2 && computer==1){
         printf("The computer chose paper\nYou Win!!");
     } 
+    else if(player==3){
+        break;
+    }
+}
+
     return 0;
 }
